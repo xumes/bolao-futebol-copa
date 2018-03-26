@@ -15,6 +15,9 @@ var cfenv = require('cfenv');
 // create a new express server
 var app = express();
 
+const rotas = require('./rotas')
+
+app.use('/api', rotas)
 
 // serve the files out of ./public as our main files
 app.use(express.static(__dirname + '/public'));
